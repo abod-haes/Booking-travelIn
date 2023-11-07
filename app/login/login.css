@@ -1,0 +1,117 @@
+    .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 20px;
+        background: url('/word.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        z-index: 2;
+    }
+
+    .popLogin {
+        position: absolute;
+        background-color: #029e9d12;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: var(--mainColor) !important;
+    }
+
+    .login form {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        z-index: 4;
+    }
+
+    .login label {
+        color: #777 !important;
+    }
+
+    .login .form {
+        padding: 40px 30px;
+        border: 3px solid var(--mainColor);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    .login h2 {
+        color: var(--secondColor);
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 200;
+    }
+
+    .login .logo {
+        color: var(--mainColor);
+        font-size: 3.5rem;
+    }
+
+    .login .logo span {
+        color: var(--secondColor);
+    }
+
+    .login label {
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+    }
+
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #777 !important;
+    }
+
+    .login .loginButto {
+        background-color: var(--mainColor);
+        box-shadow: none;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .login .text {
+        color: var(--black);
+    }
+
+    .login .text a {
+        color: var(--secondColor);
+    }
+
+    .login .text p {
+        color: var(--darkBlue);
+    }
+
+    @media (max-width: 768px) {
+        .login .form {
+            width: 90%;
+        }
+
+        .login form {
+            width: 90%;
+        }
+    }
+    .login
+    .css-1fu7jd5-MuiButtonBase-root-MuiButton-root:hover {
+        background-color: var(--mainColor)!important;
+        box-shadow: none;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .login .loginButton:hover {
+        background-color: var(--mainColor) !important;
+    }

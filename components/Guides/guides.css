@@ -1,0 +1,129 @@
+.guides {
+    padding: 80px 15px 150px;
+}
+
+.guides .img {
+    position: relative;
+    width: 250px;
+    height: 300px;
+}
+
+.guides .guide {
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    */
+    width: fit-content;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.guides .guide .details {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    gap: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.guides .guide .details img {
+    background-color: #c3c3c3;
+    padding: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0;
+    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.guides .guide:hover .details img {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.guides .guide .details img:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.guides .guide .details img:nth-child(3) {
+    transition-delay: .2s;
+}
+
+.guides .guide .details img:nth-child(4) {
+    transition-delay: .3s;
+}
+
+.guides .guide .img .me {
+    width: 250px !important;
+    height: 300px !important;
+}
+
+.guides .guide .img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.guides .guide:hover .img::before {
+    opacity: 1;
+}
+
+.guides .guide .text {
+    position: relative;
+    z-index: 3;
+    padding: 20px 30px;
+    background-color: var(--mainColor);
+    text-align: center;
+}
+
+.guides .guide .text h4 {
+    color: var(--secondColor);
+}
+
+.guides .guide .text p {
+    color: white;
+    font-size: 14px;
+}
+
+.guides .cardsGuides {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}

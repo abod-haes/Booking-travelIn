@@ -1,0 +1,92 @@
+.booking .card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.booking .card .details {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.booking .card .img {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.booking .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    max-width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.css-u4tvz2-MuiFormLabel-root.Mui-focused {
+    color: var(--mainColor) !important;
+}
+
+.css-qfz70r-MuiFormGroup-root {
+    color: var(--black) !important;
+}
+
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+    color: var(--mainColor) !important;
+}
+
+.booking .now {
+    background-color: var(--secondColor);
+}
+
+.css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root:first-child {
+    margin-right: 8px;
+}
+
+.css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root:last-child {
+    margin-left: 8px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+}
+
+.alert .css-i4bv87-MuiSvgIcon-root {
+    color: var(--mainColor) !important;
+}
+
+
+/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: var(--mainColor) !important;
+} */
+
+.css-ahj2mt-MuiTypography-root {
+    font-size: 20px;
+}
+
+.tow.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label::after {
+    content: ' First Class';
+    font-size: 14px;
+    color: var(--paragraph);
+}
+
+.one.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label::after {
+    content: ' Economy Class';
+    font-size: 14px;
+    color: var(--paragraph);
+}
+
+
+/* .css-ahj2mt-MuiTypography-root::after:last-child {
+    content: ' First Class';
+    font-size: 14px;
+    color: var(--paragraph);
+} */

@@ -1,0 +1,65 @@
+.date {
+    height: 35px;
+    background-color: var(--mainColor);
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    position: fixed;
+    z-index: 123;
+    width: 100%;
+}
+
+.date .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date .container svg {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.date .calls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.date .call {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.date .icons img:hover {
+    cursor: pointer;
+}
+
+.date .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date .icons .span {
+    width: 1px;
+    background-color: white;
+    height: 20px;
+}
+
+@media(max-width:660px) {
+    .date .call:nth-child(1) {
+        display: none;
+    }
+
+    .date .call:nth-child(2) {
+        display: none;
+    }
+}
+
+.loginButton {
+    color: var(--secondColor) !important;
+    margin: 0 10px;
+}
