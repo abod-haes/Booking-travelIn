@@ -23,9 +23,6 @@
         z-index: -1;
     }
 
-    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: var(--mainColor) !important;
-    }
 
     .login form {
         width: 500px;
@@ -75,14 +72,12 @@
         -o-transition: .3s;
     }
 
-    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: #777 !important;
-    }
 
     .login .loginButto {
         background-color: var(--mainColor);
         box-shadow: none;
         font-family: 'Titillium Web', sans-serif;
+
     }
 
     .login .text {
@@ -106,12 +101,8 @@
             width: 90%;
         }
     }
-    .login
-    .css-1fu7jd5-MuiButtonBase-root-MuiButton-root:hover {
-        background-color: var(--mainColor)!important;
-        box-shadow: none;
-        font-family: 'Titillium Web', sans-serif;
-    }
+
+
     .login .loginButton:hover {
         background-color: var(--mainColor) !important;
     }

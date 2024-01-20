@@ -1,275 +1,266 @@
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+dev .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }
+
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Small */
 
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-
-@media (min-width :992px) {
-    .container {
-        width: 960px;
-    }
-}
-
-@media (min-width:1200px) {
-    .container {
-        width: 1170px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-}
-
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+  .container {
+    width: 750px;
+  }
 }
 
 
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+/* end global rules */
 /*               start         root       */
 
 :root {
-    --black: #101010;
-    --darkBlue: #17233E;
-    --mainColor: #029E9D;
-    --secondColor: #FDC703;
-    --paragraph: #777;
+  --black: #101010;
+  --darkBlue: #17233E;
+  --mainColor: #029E9D;
+  --secondColor: #FDC703;
+  --paragraph: #777;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 *:not(svg) {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--black);
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--black);
 }
 
 .main-header {
-    color: var(--mainColor);
-    text-align: center;
-    margin: 30px auto 40px;
+  color: var(--mainColor);
+  text-align: center;
+  margin: 30px auto 40px;
 }
 
 .main-header h3 {
-    color: var(--secondColor);
-    font-size: 24px;
-    font-weight: 200;
+  color: var(--secondColor);
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .main-header h2 {
-    font-size: 46px;
-    font-weight: 300;
+  font-size: 46px;
+  font-weight: 300;
 }
 
 .main-header .black {
-    color: var(--black);
+  color: var(--black);
 }
 
 .main-header p {
-    color: var(--paragraph);
+  color: var(--paragraph);
 }
 
-.css-1c32n2y-MuiBadge-root {
-    position: fixed;
-    right: 40px;
-    bottom: 40px !important;
-    z-index: 21;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-.orders
-.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
-    background-color: var(--mainColor) !important;
-    color: white;
-    padding: 10px;
-}
 
-.css-9emuhu-MuiPaper-root-MuiDrawer-paper {
-    height: 50vh;
-    overflow-y: auto;
-}
 
 .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --color:var(--mainColor);
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1234;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    --animation: 2s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --color: var(--mainColor);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1234;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  --animation: 2s ease-in-out infinite;
+}
+
+.loader .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: solid 2px var(--color);
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: transparent;
+  animation: circle-keys var(--animation);
+}
+
+.loader .circle .dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color);
+  animation: dot-keys var(--animation);
+}
+
+.loader .circle .outline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: outline-keys var(--animation);
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(2) .dot {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) .dot {
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) .dot {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) .dot {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(1) .outline {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(2) .outline {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(3) .outline {
+  animation-delay: 1.5s;
+}
+
+.circle:nth-child(4) .outline {
+  animation-delay: 1.8s;
+}
+
+.circle:nth-child(5) .outline {
+  animation-delay: 2.1s;
+}
+
+@keyframes circle-keys {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .loader .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border: solid 2px var(--color);
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: transparent;
-    animation: circle-keys var(--animation);
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
   }
-  
-  .loader .circle .dot {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: var(--color);
-    animation: dot-keys var(--animation);
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .loader .circle .outline {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: outline-keys var(--animation);
+}
+
+@keyframes dot-keys {
+  0% {
+    transform: scale(1);
   }
-  
-  .circle:nth-child(2) {
-    animation-delay: 0.3s;
+
+  50% {
+    transform: scale(0);
   }
-  
-  .circle:nth-child(3) {
-    animation-delay: 0.6s;
+
+  100% {
+    transform: scale(1);
   }
-  
-  .circle:nth-child(4) {
-    animation-delay: 0.9s;
+}
+
+@keyframes outline-keys {
+  0% {
+    transform: scale(0);
+    outline: solid 20px var(--color);
+    outline-offset: 0;
+    opacity: 1;
   }
-  
-  .circle:nth-child(5) {
-    animation-delay: 1.2s;
+
+  100% {
+    transform: scale(1);
+    outline: solid 0 transparent;
+    outline-offset: 20px;
+    opacity: 0;
   }
-  
-  .circle:nth-child(2) .dot {
-    animation-delay: 0.3s;
-  }
-  
-  .circle:nth-child(3) .dot {
-    animation-delay: 0.6s;
-  }
-  
-  .circle:nth-child(4) .dot {
-    animation-delay: 0.9s;
-  }
-  
-  .circle:nth-child(5) .dot {
-    animation-delay: 1.2s;
-  }
-  
-  .circle:nth-child(1) .outline {
-    animation-delay: 0.9s;
-  }
-  
-  .circle:nth-child(2) .outline {
-    animation-delay: 1.2s;
-  }
-  
-  .circle:nth-child(3) .outline {
-    animation-delay: 1.5s;
-  }
-  
-  .circle:nth-child(4) .outline {
-    animation-delay: 1.8s;
-  }
-  
-  .circle:nth-child(5) .outline {
-    animation-delay: 2.1s;
-  }
-  
-  @keyframes circle-keys {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  
-    50% {
-      transform: scale(1.5);
-      opacity: 0.5;
-    }
-  
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes dot-keys {
-    0% {
-      transform: scale(1);
-    }
-  
-    50% {
-      transform: scale(0);
-    }
-  
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes outline-keys {
-    0% {
-      transform: scale(0);
-      outline: solid 20px var(--color);
-      outline-offset: 0;
-      opacity: 1;
-    }
-  
-    100% {
-      transform: scale(1);
-      outline: solid 0 transparent;
-      outline-offset: 20px;
-      opacity: 0;
-    }
-  }
-  .fight {
-    position: fixed;
-    bottom: 40px;
-z-index: 111;
-right: 40px;  }
+}
+
+.fight {
+  position: fixed;
+  bottom: 40px;
+  background-color: var(--mainColor);
+  color: white;
+  z-index: 111;
+  right: 40px;
+}

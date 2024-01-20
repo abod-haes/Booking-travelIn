@@ -18,7 +18,6 @@ class AuthService {
 
     public register = async (data: any) => {
         const {email, password, userId, name} = data
-        // console.log(AuthService.account.create)
         return AuthService.account.create(userId, email, password, name)
     }
 }

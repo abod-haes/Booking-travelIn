@@ -42,14 +42,17 @@
 console.log(orders.length);
     return (
         <div className="orders">
-        <IconButton onClick={() => setOpen(true)} className="fight">
+        <IconButton onClick={() => setOpen(true)} className="fight" sx={{  backgroundColor: 'var(--mainColor)',
+    color: 'white',
+    padding: '10px'}}>
             <MdOutlineFlightTakeoff className="flight" />
         </IconButton>
         <Drawer
             open={open}
             anchor="bottom"
             onClose={() => setOpen(false)}
-            style={{ minHeight: "500px" }}
+            sx={{height :'50vh'}}
+            style={{height :'50vh'}}
         >
             <div className="container order">
             <Image src="/LogoTravelIn.png" alt="" width={200} height={47} />

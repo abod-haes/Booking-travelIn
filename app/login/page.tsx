@@ -1,46 +1,54 @@
-"use client"
-import React, {FormEvent, useState} from "react"
-import TextField from "@mui/material/TextField"
-import Button from "@mui/material/Button"
-import {ToastContainer, toast} from "react-toastify"
-import "./login.css"
-import {AuthService} from "@/services"
-import {useRouter} from "next/navigation"
-import {setIdCookie} from "@/utils/cookies"
+"use client";
+import React, { FormEvent, useState } from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { ToastContainer, toast } from "react-toastify";
+import "./login.css";
+import { AuthService } from "@/services";
+import { useRouter } from "next/navigation";
+import { setIdCookie } from "@/utils/cookies";
 import { TransitionGroup } from "react-transition-group";
-import { Snipper } from "@/components"
+import { Snipper } from "@/components";
+import { ThemeProvider, createTheme } from "@mui/material";
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#029E9D",
+        },
+    },
+});
 const Page = () => {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [isLoading, setLoading] = useState(false)
-    const route = useRouter()
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [isLoading, setLoading] = useState(false);
+    const route = useRouter();
 
     const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+        e.preventDefault();
         if (!email || !password) {
-            toast.error("please Fill all fields")
-            return
+            toast.error("please Fill all fields");
+            return;
         }
 
-        const authService = AuthService.getInstance()
+        const authService = AuthService.getInstance();
 
-        setLoading(true)
+        setLoading(true);
         authService
             .login(email, password)
             .then((res: any) => {
-                setLoading(false)
-                setIdCookie(res.userId)
-                route.replace("/")
+                setLoading(false);
+                setIdCookie(res.userId);
+                route.replace("/");
             })
-            .catch(err => {
-                toast.error(err.message)
+            .catch((err) => {
+                toast.error(err.message);
 
-                setLoading(false)
-            })
-    }
+                setLoading(false);
+            });
+    };
 
     return (
-        <>
+        <ThemeProvider theme={theme}>
             <div className="login">
                 <ToastContainer />
                 <div className="popLogin" />
@@ -55,21 +63,21 @@ const Page = () => {
                             label="Email"
                             variant="outlined"
                             value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <TextField
                             id="password"
                             label="Password"
                             variant="outlined"
                             value={password}
-                            onChange={e => setPassword(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         <Button
                             type="submit"
                             variant="contained"
                             fullWidth
                             className="loginButto"
-                            style={{padding: "15px"}}
+                            style={{ padding: "15px" }}
                         >
                             {isLoading ? <Snipper /> : "Login"}
                         </Button>
@@ -88,8 +96,8 @@ const Page = () => {
                     </form>
                 </div>
             </div>
-        </>
-    )
-}
+        </ThemeProvider>
+    );
+};
 
-export default Page
+export default Page;

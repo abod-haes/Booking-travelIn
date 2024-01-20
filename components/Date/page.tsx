@@ -1,29 +1,29 @@
-import React, {useEffect, useState} from "react"
-import "./date.css"
-import Button from "@mui/material/Button"
-import CallIcon from "@mui/icons-material/Call"
-import QueryBuilderOutlinedIcon from "@mui/icons-material/QueryBuilderOutlined"
-import MailOutlineIcon from "@mui/icons-material/MailOutline"
-import Image from "next/image"
-import {getIdCookie, deleteIdCookie} from "@/utils/cookies"
-import {useRouter} from "next/navigation"
-import { toast } from "react-toastify"
+import React, { useEffect, useState } from "react";
+import "./date.css";
+import Button from "@mui/material/Button";
+import CallIcon from "@mui/icons-material/Call";
+import QueryBuilderOutlinedIcon from "@mui/icons-material/QueryBuilderOutlined";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import Image from "next/image";
+import { getIdCookie, deleteIdCookie } from "@/utils/cookies";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const CurrentDate: React.FC = () => {
-    const [hour, setHour] = useState<number>(0)
-    const [min, setMin] = useState<number>(0)
-    const [isLogin, setIsLogin] = useState(getIdCookie())
-    const [isLoading , setIsLoading] =useState (false)
-    const route = useRouter()
+    const [hour, setHour] = useState<number>(0);
+    const [min, setMin] = useState<number>(0);
+    const [isLogin, setIsLogin] = useState(getIdCookie());
+    const [isLoading, setIsLoading] = useState(false);
+    const route = useRouter();
     useEffect(() => {
-        setIsLogin(getIdCookie())
+        setIsLogin(getIdCookie());
         const intervalId = setInterval(() => {
-            const currentDate = new Date()
-            setMin(currentDate.getMinutes())
-            setHour(currentDate.getHours())
-        }, 1000)
-        return () => clearInterval(intervalId)
-    }, [])
+            const currentDate = new Date();
+            setMin(currentDate.getMinutes());
+            setHour(currentDate.getHours());
+        }, 1000);
+        return () => clearInterval(intervalId);
+    }, []);
 
     return (
         <div className="date">
@@ -65,7 +65,7 @@ const CurrentDate: React.FC = () => {
                         alt="facebook"
                         width={500}
                         height={500}
-                        style={{width: "20px", height: "20px"}}
+                        style={{ width: "20px", height: "20px" }}
                     />
                     <span className="span"></span>
                     <Image
@@ -79,13 +79,13 @@ const CurrentDate: React.FC = () => {
                             className="loginButton"
                             variant="text"
                             onClick={() => {
-                                deleteIdCookie()
-                                setIsLogin(getIdCookie())
-                                toast.info("You are logged out")
-                                route.replace("/")
+                                deleteIdCookie();
+                                setIsLogin(getIdCookie());
+                                toast.info("You are logged out");
+                                route.replace("/");
                             }}
                         >
-                        {isLoading?'ad':'logout'}
+                            {isLoading ? "" : "logout"}
                         </Button>
                     ) : (
                         <Button
@@ -99,7 +99,7 @@ const CurrentDate: React.FC = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CurrentDate
+export default CurrentDate;
